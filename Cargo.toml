@@ -32,3 +32,6 @@ web_test = []
 yaml = ["serde_yaml"]
 msgpack = ["rmp-serde"]
 cbor = ["serde_cbor"]
+
+[patch.crates-io]
+stdweb = { git = "https://github.com/koute/stdweb.git" }

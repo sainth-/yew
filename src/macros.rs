@@ -112,6 +112,9 @@ macro_rules! html_impl {
     (@vtag $stack:ident (onchange = | $var:pat | $handler:expr, $($tail:tt)*)) => {
         html_impl! { @vtag $stack ((onchange) = move | $var: $crate::prelude::ChangeData | $handler, $($tail)*) }
     };
+    (@vtag $stack:ident (oncontextmenu = | $var:pat | $handler:expr, $($tail:tt)*)) => {
+        html_impl! { @vtag $stack ((oncontextmenu) = move | $var: $crate::prelude::ContextMenuEvent | $handler, $($tail)*) }
+    };
     // PATTERN: (action)=expression,
     (@vtag $stack:ident (($action:ident) = $handler:expr, $($tail:tt)*)) => {
         // Catch value to a separate variable for clear error messages

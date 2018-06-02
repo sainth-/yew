@@ -322,6 +322,7 @@ impl_action! {
     onmouseup(event: MouseUpEvent) -> MouseUpEvent => |_, event| { event }
     onmouseover(event: MouseOverEvent) -> MouseOverEvent => |_, event| { event }
     onmouseout(event: MouseOutEvent) -> MouseOutEvent => |_, event| { event }
+    oncontextmenu(event: ContextMenuEvent) -> ContextMenuEvent => |_, event| { event }
     /* TODO Add PR to https://github.com/koute/stdweb
     onmouseenter(event: MouseEnterEvent) -> () => |_, _| { () }
     onmouseleave(event: MouseLeaveEvent) -> () => |_, _| { () }
